@@ -1,15 +1,10 @@
-def numdivision(numlist , num ):
-    numinlist  = len(numlist)
-    counter = 0
-    for numbers in range(numinlist ) :
-        if numlist[counter] % num == 0 :
-            for extranum in range(numinlist - numbers - 1):
-                numlist[counter + extranum] = numlist[counter + extranum + 1]
-            counter = counter-1
-            numlist.pop()
-        counter = counter + 1
-    return numlist
 
-numlist = [2, 9, 100, 12, 8, 3]
-num = 3
-print(numdivision(numlist, num))
+def remove_dividend_numbers(num_list: list[int], divisor: int):
+    for number in num_list[:]:  
+        if number % divisor == 0:
+            num_list.remove(number)
+    return num_list
+list1 = remove_dividend_numbers([2, 12, 100, 6, 8, 3], 2)
+print(list1)
+
+
