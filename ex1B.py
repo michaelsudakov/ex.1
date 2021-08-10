@@ -1,6 +1,6 @@
-
-def remove_dividend_numbers(num_list: list[int], divisor: int):
-    for number in num_list[:]:  
+from typing import List
+def remove_dividend_numbers(num_list: List[int], divisor: int) -> List[int]:
+    for number in num_list.copy():
         if number % divisor == 0:
             num_list.remove(number)
     return num_list
