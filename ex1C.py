@@ -1,4 +1,5 @@
 from typing import List
+
 def remove_dividend_numbers(num_list: List[int], divisor: int) -> List[int]:
     return [number for number in num_list if number % divisor != 0]
 
